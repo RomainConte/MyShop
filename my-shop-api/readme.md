@@ -11,6 +11,7 @@ My Shop API is a backend application that powers an e-commerce website. It provi
 # Prerequisites
 
 - Docker and Docker Compose
+- Node.js
 
 ## Installation
 
@@ -35,6 +36,7 @@ From there you can find the documentation to the API at the following url: *http
 2. The API will be accessible at `http://localhost:3007`
 
 ## API Endpoints
+you can also see all the route in router/index.js 
 - `/login` - go to login page 
 - `/register` - go to register page
 - `/admin` - go to admin page
