@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "d2325d26-a17a-4a21-b501-2265d60e0238",
+		"name": "myshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30698262"
+	},
+	"item": [
+		{
+			"name": "autentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"c_romain@outlook.fr\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/authentication_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"authentication_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -13,7 +13,9 @@
 
         <main>
             <h1>Products :</h1>
+            
             <div class="products">
+                
                 <div class="product-row">
                     <div class="product-card" v-for="product in filteredProducts" :key="product.id">
                         <div class="product-info">
@@ -23,8 +25,12 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <router-link to="/admin">cliquez ici pour retourner sur la page admin</router-link>
+                </div>
             </div>
         </main>
+        
     </div>
 </template>
 
@@ -32,7 +38,7 @@
 import axios from 'axios';
 axios.interceptors.request.use(config => {
     // Ajoute le token d'authentification à chaque requête sortante
-    config.headers.Authorization = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDAyNTI5NzksImV4cCI6MTcwMDI1NjU3OSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImNfcm9tYWluQG91dGxvb2suZnIifQ.A8YcUjXqd-kGhTlcaPxFP1DtvpCgtzTk7n48of3RaagsHor4bTMsaFDNbSSfvtgvRuln6b7W83saq2Q82kyKbzh2kUTpTGRzr-5eaeoIJAtBz7qrEmkuombcaH03E9jDDHne8NsOfG-Sj4LX_Zctm-CfBaQfJaUinbU7e_J0GvfNH3JdoYnv7ruhdyxLHVglh0RM6VxgkWBpquswyzpToBelBWnRFI4mAVKgM7ZqkDR0SodmZcmWPLZMr3DlM8T4GL7aYteXJbLnZ8nuS9jxmXmOwMtZTmp5eTqJ2KoC-FvtwXkcusqViGvrao5vjqt0FZYDrKJiPEbG-4z-fGjo3A';
+    config.headers.Authorization = localStorage.getItem('token');
     return config;
 });
 export default {
@@ -119,6 +125,9 @@ header {
     justify-content: space-between;
     position: relative;
     top: 75%;
+}
+router-link{
+    margin-top: 15em;
 }
 .product-card {
     display: inline-block;

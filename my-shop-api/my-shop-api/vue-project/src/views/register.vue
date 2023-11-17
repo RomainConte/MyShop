@@ -38,7 +38,7 @@
             return;
           }
 
-          const yourToken = " eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDAyMTY0NjUsImV4cCI6MTcwMDIyMDA2NSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImNfcm9tYWluQG91dGxvb2suZnIifQ.g-_IoWAmqatY8HZRXu4zGlFZyWtPIxm1yo3i_qozp4aUI9yISDCVkwIfhLYtvVfcjG2WOP_sySmjssA_3TBOpVaAaKO9K7u1ozUGkCvy9rIi9e82uaGJV1uWEIFqXMeecvVYZGVWSYTeA77l-S4ZM24OxXwD1W3pDcfStjNjKb_dxGwrFY7Y_I7g5jwzxphhQ3MQC4sDYdMAooKdDgIu3Tlpyl9H9ZP7GxrQBomViWOqHsFHwk0rgyKobJH_HccmSAS0W1o6W--GxU9o1ee-aKd2CW-8-o_5VZS9tw1AT3j1ahwansNseb2_Eu_6UwCr3u33sOWkJwQq3XrfgXK6yg"
+          const yourToken = localStorage.getItem('token');
           fetch('http://localhost/api/users', {
             method: 'POST',
             headers: {

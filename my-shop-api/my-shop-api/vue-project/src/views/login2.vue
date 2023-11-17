@@ -39,6 +39,10 @@ export default {
         email : this.email,
         password : this.password
       })
+      .then(response => {
+        const token = response.data.token;
+        localStorage.setItem('token', token);
+      
       this.status = response.status
       if (this.status == 200 || this.status == 201) {
         this.errorMessage = ''
@@ -49,6 +53,7 @@ export default {
       else {
         this.errorMessage = 'Invalid username or password.'
       }
+    })
       }
       catch(error){
         console.error(error)

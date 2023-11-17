@@ -13,7 +13,7 @@ My Shop API is a backend application that powers an e-commerce website. It provi
 - Docker and Docker Compose
 - Node.js
 
-## Installation
+## Installation docker 
 
 1) First, go into "*docker*" folder and run "*docker-compose up -d --build*" to install the environment
 2) Now all your 4 containers should be running (it can take up to 1 minute before container are loaded: if you have the symfony default page on http://localhost/ that mean everything has been loaded correctly and you can pursue). Now you can go inside PHP container and follow the next steps.
@@ -37,9 +37,11 @@ From there you can find the documentation to the API at the following url: *http
 
 ## API Endpoints
 you can also see all the route in router/index.js 
-- `/login` - go to login page 
+- `/login` - go to login page. (Ensure to right the same information of the admin user for the email and the password as you did during the docker installation.)
 - `/register` - go to register page
 - `/admin` - go to admin page
 - `/users` - go to users page
 - `/products` -go to products page 
+
+.
 

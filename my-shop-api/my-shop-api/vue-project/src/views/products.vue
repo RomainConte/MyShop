@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div>
+            <router-link to="/admin">cliquez ici pour retourner sur la page admin</router-link>
+        </div>
         <h1>Liste des produits</h1>
         <table>
             <thead>
@@ -7,7 +10,6 @@
                     <th>Nom</th>
                     <th>Description</th>
                     <th>Prix</th>
-                    <th>Catégories</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -16,7 +18,6 @@
                     <td>{{ product.name }}</td>
                     <td>{{ product.description }}</td>
                     <td>{{ product.price }}</td>
-                    <td>{{ product.categories }}</td>
                     <td>
                         <button @click="deleteProduct(product.id)">Supprimer</button>
                         <button @click="editProduct(product)">Modifier</button>
@@ -34,8 +35,6 @@
                 <input type="text" id="description" v-model="newProduct.description" required>
                 <label for="price">Prix:</label>
                 <input type="number" id="price" v-model="newProduct.price" required>
-                <label for="categories">Catégories:</label>
-
             </form>
         </div>
     </div>
@@ -45,7 +44,7 @@
 import axios from 'axios';
 axios.interceptors.request.use(config => {
   // Ajoute le token d'authentification à chaque requête sortante
-  config.headers.Authorization = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDAyNTI5NzksImV4cCI6MTcwMDI1NjU3OSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImNfcm9tYWluQG91dGxvb2suZnIifQ.A8YcUjXqd-kGhTlcaPxFP1DtvpCgtzTk7n48of3RaagsHor4bTMsaFDNbSSfvtgvRuln6b7W83saq2Q82kyKbzh2kUTpTGRzr-5eaeoIJAtBz7qrEmkuombcaH03E9jDDHne8NsOfG-Sj4LX_Zctm-CfBaQfJaUinbU7e_J0GvfNH3JdoYnv7ruhdyxLHVglh0RM6VxgkWBpquswyzpToBelBWnRFI4mAVKgM7ZqkDR0SodmZcmWPLZMr3DlM8T4GL7aYteXJbLnZ8nuS9jxmXmOwMtZTmp5eTqJ2KoC-FvtwXkcusqViGvrao5vjqt0FZYDrKJiPEbG-4z-fGjo3A';
+config.headers.Authorization = localStorage.getItem('token');
   return config;
 });
 
@@ -60,7 +59,6 @@ export default {
                 name: '',
                 description: '',
                 price: 0,
-                
             }
         };
     },
@@ -81,7 +79,7 @@ export default {
                 });
         },
         deleteProduct(productId) {
-            const yourToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MDAyNTI5NzksImV4cCI6MTcwMDI1NjU3OSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImNfcm9tYWluQG91dGxvb2suZnIifQ.A8YcUjXqd-kGhTlcaPxFP1DtvpCgtzTk7n48of3RaagsHor4bTMsaFDNbSSfvtgvRuln6b7W83saq2Q82kyKbzh2kUTpTGRzr-5eaeoIJAtBz7qrEmkuombcaH03E9jDDHne8NsOfG-Sj4LX_Zctm-CfBaQfJaUinbU7e_J0GvfNH3JdoYnv7ruhdyxLHVglh0RM6VxgkWBpquswyzpToBelBWnRFI4mAVKgM7ZqkDR0SodmZcmWPLZMr3DlM8T4GL7aYteXJbLnZ8nuS9jxmXmOwMtZTmp5eTqJ2KoC-FvtwXkcusqViGvrao5vjqt0FZYDrKJiPEbG-4z-fGjo3A"
+            const yourToken = localStorage.getItem('token');
 
             fetch(`http://localhost/api/products/${productId}`, {
                 method: 'DELETE',

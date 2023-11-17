@@ -2,8 +2,8 @@
     <div>
         <h1>Welcome to MyShop Admin Panel</h1>
         <p>Here you can manage your products and orders.</p>
-         <router-link to="/products">cliquez ici pour voir les produits en tant qu'admin</router-link>
-        <router-link to="/users">cliquez ici pour allez sur la page users</router-link>
+        <div><router-link to="/products">cliquez ici pour voir les produits en tant qu'admin</router-link></div>
+        <div><router-link to="/users">cliquez ici pour allez sur la page users</router-link></div>
 
     </div>
 </template>
