@@ -1,0 +1,99 @@
+.div_header {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav_left {
+  font-family: "Avenir", sans-serif;
+  display: flex;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.nav_right {
+  font-family: "Avenir", sans-serif;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login {
+  font-family: "Avenir", sans-serif;
+  padding-left: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.name {
+    font-family: "Avenir", sans-serif;
+    padding-left: 50px;
+}
+.input-field {
+  width: 300px;
+  height: 44px;
+  line-height: 44px;
+  width: 80%;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  border-bottom: 2px solid black;
+  width: 90%;
+  font-size: 20px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search {
+  width: 45px;
+  height: 45px;
+  padding: 15px;
+  margin-left: 4.5%;
+
+}
+
+.navsearch {
+  display: flex;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#match {
+  border: 0px;
+  color: black;
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  border-bottom: 2px solid #e8e8e8;
+  outline: 0;
+}
+
+.select {
+  font-family: "Avenir", sans-serif;
+}

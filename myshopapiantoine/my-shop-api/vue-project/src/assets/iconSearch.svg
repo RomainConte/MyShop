@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>iconSearch</title>
+    <desc>Created with Sketch.</desc>
+    <g id="iconSearch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Search" transform="translate(2.000000, 2.000000)" stroke="#131313" stroke-width="2">
+            <line x1="38" y1="38" x2="26.7407407" y2="26.7407407" id="Path"></line>
+            <circle id="Oval" cx="15.1296296" cy="15.1296296" r="15.1296296"></circle>
+        </g>
+    </g>
+</svg>
