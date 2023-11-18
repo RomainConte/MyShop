@@ -7,7 +7,7 @@
             </div>
             <div class="search-container">
                 <input v-model="searchQuery" type="text" placeholder="Rechercher..." class="search-input" />
-                <button @click="search">Rechercher</button>
+            
             </div>
         </header>
 
@@ -36,11 +36,6 @@
 
 <script>
 import axios from 'axios';
-axios.interceptors.request.use(config => {
-    // Ajoute le token d'authentification à chaque requête sortante
-    config.headers.Authorization = localStorage.getItem('token');
-    return config;
-});
 export default {
     data() {
         return {
@@ -75,10 +70,7 @@ export default {
                     console.error(error);
                 });
         },
-        search() {
-            // Logique de recherche
-            alert("Recherche en cours pour : " + this.searchQuery);
-        }
+
     }
 };
 </script>

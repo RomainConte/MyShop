@@ -29,6 +29,12 @@ export default {
     }
     
   },
+  mounted() {
+    
+      console.log('clearlocalstorage')
+      localStorage.clear()
+    
+  },
   methods: {
     async getlogin() {
 
